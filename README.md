@@ -18,6 +18,14 @@ sudo apt-get install git-all
 git config --global user.name "yabouseada"
 git config --global user.email "y.abouseada@gmail.com"
 ```
+
+## Git config
+```
+sudo apt-get install git-all
+git config --global user.name "yabouseada"
+git config --global user.email "y.abouseada@gmail.com"
+```
+
 ## SSH-Keygen
 ```
 ssh-keygen -t rsa -b 4096 -C "y.abouseada@gmail.com"
