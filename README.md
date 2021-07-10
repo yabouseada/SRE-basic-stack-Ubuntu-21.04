@@ -18,6 +18,16 @@ sudo apt-get install git-all
 git config --global user.name "yabouseada"
 git config --global user.email "y.abouseada@gmail.com"
 ```
+
+## Insomnia
+```
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+sudo apt-get update
+sudo apt-get install insomnia
+```
+
 ## SSH-Keygen
 ```
 ssh-keygen -t rsa -b 4096 -C "y.abouseada@gmail.com"
