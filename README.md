@@ -19,11 +19,13 @@ git config --global user.name "yabouseada"
 git config --global user.email "y.abouseada@gmail.com"
 ```
 
-## Git config
+## Insomnia
 ```
-sudo apt-get install git-all
-git config --global user.name "yabouseada"
-git config --global user.email "y.abouseada@gmail.com"
+echo "deb [trusted=yes arch=amd64] https://download.konghq.com/insomnia-ubuntu/ default all" \
+    | sudo tee -a /etc/apt/sources.list.d/insomnia.list
+
+sudo apt-get update
+sudo apt-get install insomnia
 ```
 
 ## SSH-Keygen
