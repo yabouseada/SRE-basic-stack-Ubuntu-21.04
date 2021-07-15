@@ -9,35 +9,42 @@ class SREStack:
     # Init and config
     def __init__(self):
         print("SREStack CLI started please wait for input requests")
-        
+        self.username = input("Type your gitHub username: ")
+        self.email = input("Type your gitHub email: ")
+    
 
     def userConfig(self):
-        username = input("Type your username: ")
-        email = input("Type your email: ")
+      
 
-        gitUsernameConfigCommand = "git config --global user.name \"" + username + "\""
-        gitEmailConfigCommand = "git config --global user.email \"" + email + "\""
-
-        os.system(gitUsernameConfigCommand)
-        os.system(gitEmailConfigCommand)
-
-        return(True)
-        
+        gitName = f'git config --global user.name "{self.username}"'
+        gitMail = f'git config --global user.email"{self.email}"'
+       
+        gitConfig=[gitName,gitMail]
+        return(gitConfig)
+         
     # Execute each function as intended
-    def exec(self):
-        self.userConfig()
+ 
+    
+    def test(self):
+        user_array= (self.userConfig())
+        for user in user_array:
+            print(user)
+        
         return(True)
+
 
 instancedClass = SREStack()
 
-instancedClass.exec()
+instancedClass.test()
+      
 
 
 
 # # SRE-basic-stack-Ubuntu-21.04
 # CLI fore clear ubuntu desktop v21.04
+instancedClass = SREStack()
 
-# ## Directories
+instancedClass.test()
 # ```
 # mkdir ~/Studies
 # mkdir ~/Work
