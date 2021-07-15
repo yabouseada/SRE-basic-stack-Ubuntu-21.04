@@ -11,26 +11,42 @@ class SREStack:
         print("SREStack CLI started please wait for input requests")
         self.username = input("Type your gitHub username: ")
         self.email = input("Type your gitHub email: ")
-    
+   
+    def commandLine(self)
+         print("Installing Requierments")
+        commandConfig = [   'mkdir ~/Studies', 
+                            'mkdir ~/Work',
+                            'sudo apt-get update',
+                            'sudo apt-get install git-all',
+                            'sudo snap install docker',
+                            'sudo apt install gdebi',
+                            'wget - O hyper_3.0.2 https://releases.hyper.is/download/deb',
+                            'sudo gdebi deb',
+                            'sudo snap install --classic code # or code-insiders',
+                            'sudo snap install discord',
+                            'sudo snap install telegram-desktop'
+        ]
+        return(commandConfig)
 
-    def userConfig(self):
-      
-
-        gitName = f'git config --global user.name "{self.username}"'
-        gitMail = f'git config --global user.email"{self.email}"'
-       
-        gitConfig=[gitName,gitMail]
+    def userConfig(self): 
+        gitConfig = [ 
+                    f'git config --global user.name "{self.username}"',
+                    f'git config --global user.email"{self.email}"'
+                    ]
         return(gitConfig)
          
     # Execute each function as intended
  
     
-    def test(self):
-        user_array= (self.userConfig())
-        for user in user_array:
-            print(user)
+    # def main(self):
+        # user_array= (self.userConfig())
+        # for user in user_array:
+        #     print(user)
         
-        return(True)
+        # return(True)
+        # userArray = (self.userConfig())
+        # commandArray = (self.commandLine())
+        # for user,command in userArray
 
 
 instancedClass = SREStack()
